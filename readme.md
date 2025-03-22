@@ -71,11 +71,4 @@
 
 ## Live Agentic AI And Generative AI With Cloud Bootcamp
 
-<img src="https://github.com/user-attachments/assets/631e9c52-e385-4bab-a629-ab2167a199ee" alt="Alt Text" width="500" height="300">
 
-1. **Admission Link: https://learn.krishnaikacademy.com/l/a981029ab3**
-2. **Start Date January 25th, 2025**
-3. **Timing:3 PM to 6 PM IST (Saturday and Sunday)**
-4. **Duration: 4-5 months**
-5. **Mentors: Sourangshu Paul, Mayank Aggarwal, Krish Naik, and Sunny Savitha**
-6. **Reach out to Krish Naik's counselling team on 📞 +91-9111533440 in case of any queries we are there to help you out.**
