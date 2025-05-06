@@ -110,3 +110,30 @@ Repeat the updates until the cost function converges (i.e., changes in `J(β₀,
 Gradient Descent can be visualized as moving downhill on a surface (cost function) to reach the lowest point (minimum error).
 
 
+Basic Python implementation:
+
+```python
+
+# Simple gradient descent for linear regression
+import numpy as np
+
+# Example data
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 4, 6, 8, 10])
+
+# Parameters
+m = len(x)
+b0 = 0
+b1 = 0
+alpha = 0.01
+epochs = 1000
+
+# Gradient Descent Loop
+for _ in range(epochs):
+    y_pred = b0 + b1 * x
+    error = y_pred - y
+    b0 -= alpha * (1/m) * np.sum(error)
+    b1 -= alpha * (1/m) * np.sum(error * x)
+
+print(f"Intercept: {b0:.2f}, Slope: {b1:.2f}")
+```
