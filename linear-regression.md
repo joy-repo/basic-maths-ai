@@ -58,6 +58,8 @@ The cost function for linear regression is the Mean Squared Error (MSE):
 J(β₀, β₁) = (1/2m) * Σ [h(Xᵢ) - Yᵢ]²
 ```
 
+![alt text](image.png)
+
 Where:
 - `m` is the number of training examples.
 - `h(Xᵢ)` is the predicted value: `h(Xᵢ) = β₀ + β₁Xᵢ`.
@@ -74,6 +76,8 @@ The goal is to minimize `J(β₀, β₁)` by updating the parameters `β₀` and
 β₀ := β₀ - α * (∂J/∂β₀)
 β₁ := β₁ - α * (∂J/∂β₁)
 ```
+![alt text](image-2.png)
+
 
 Where:
 - `α` is the learning rate (controls the step size).
@@ -93,6 +97,8 @@ The partial derivatives of the cost function are:
 ∂J/∂β₁ = (1/m) * Σ [h(Xᵢ) - Yᵢ] * Xᵢ
 ```
 
+
+![alt text](image-1.png)
 Substitute these gradients into the update rules to iteratively adjust `β₀` and `β₁`.
 
 ### Iterative Process
