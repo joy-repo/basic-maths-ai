@@ -137,3 +137,59 @@ for _ in range(epochs):
 
 print(f"Intercept: {b0:.2f}, Slope: {b1:.2f}")
 ```
+
+
+## Choosing the Learning Rate (α)
+
+The learning rate `α` is a crucial hyperparameter in the Gradient Descent algorithm. It determines the size of the steps taken towards minimizing the cost function. Selecting an appropriate value for `α` is essential for the algorithm's performance.
+
+### Guidelines for Selecting `α`
+
+1. **Start Small**: Begin with a small value, such as `0.01` or `0.001`, and observe the convergence behavior.
+2. **Experimentation**: Test different values of `α` to find the one that works best for your dataset.
+3. **Avoid Large Values**: A large `α` can cause the algorithm to overshoot the minimum, leading to divergence.
+4. **Monitor Convergence**: Plot the cost function over iterations to ensure it decreases steadily.
+
+### Common Practices
+
+- Use a **learning rate schedule** to adjust `α` dynamically during training (e.g., reduce `α` as the number of iterations increases).
+- Implement **adaptive optimizers** like Adam or RMSProp, which adjust the learning rate automatically.
+
+### Example of Testing `α`
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Example data
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([3, 5, 7, 9, 11])
+
+# Parameters
+m = len(x)
+b0 = 0
+b1 = 0
+epochs = 1000
+
+# Test different learning rates
+learning_rates = [0.001, 0.01, 0.1]
+for alpha in learning_rates:
+    b0, b1 = 0, 0
+    cost_history = []
+    for _ in range(epochs):
+        y_pred = b0 + b1 * x
+        error = y_pred - y
+        cost = (1/(2*m)) * np.sum(error**2)
+        cost_history.append(cost)
+        b0 -= alpha * (1/m) * np.sum(error)
+        b1 -= alpha * (1/m) * np.sum(error * x)
+    plt.plot(cost_history, label=f"α={alpha}")
+
+plt.xlabel("Iterations")
+plt.ylabel("Cost")
+plt.legend()
+plt.title("Cost Function vs. Iterations")
+plt.show()
+```
+
+By visualizing the cost function, you can identify the learning rate that leads to smooth and steady convergence.
