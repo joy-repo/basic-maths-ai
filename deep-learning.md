@@ -1,3 +1,8 @@
+# Reference
+
+https://www.youtube.com/watch?v=d2kxUVwWWwU&t=4354s&pp=ygUZRGVlcCBsZXJhcm5pbmgga3Jpc2ggbmFpaw%3D%3D 
+
+
 # Documentation Comment
 
 This code provides an introduction to the basics of deep learning. It demonstrates fundamental concepts such as defining neural network architectures, initializing model parameters, and implementing forward and backward propagation. The code is structured to help beginners understand how deep learning models are built and trained.
